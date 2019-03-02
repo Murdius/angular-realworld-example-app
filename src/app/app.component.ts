@@ -1,17 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-
-import { UserService } from './core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  constructor (
-    private userService: UserService
-  ) {}
-
-  ngOnInit() {
-    this.userService.populate();
-  }
+export class AppComponent {
+  title = 'potato';
 }
