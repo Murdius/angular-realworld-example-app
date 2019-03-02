@@ -4,24 +4,28 @@
 /dist
 /tmp
 /out-tsc
-# Only exists if Bazel was run
-/bazel-out
+/src/app/**/*.js
+!/src/app/shared/grammars/*.js
+src/app/shared/swagger/
+swagger-codegen-cli.jar
+openapi-generator-cli-3.3.1.jar
+
+documentation
 
 # dependencies
 /node_modules
-
-# profiling files
-chrome-profiler-events.json
-speed-measure-plugin.json
+/bower_components
 
 # IDEs and editors
 /.idea
+.vscode
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
+.jsbeautifyrc
 
 # IDE - VSCode
 .vscode/*
@@ -29,7 +33,6 @@ speed-measure-plugin.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
 
 # misc
 /.sass-cache
@@ -37,9 +40,15 @@ speed-measure-plugin.json
 /coverage
 /libpeerconnection.log
 npm-debug.log
-yarn-error.log
 testem.log
 /typings
+src/app/footer/versions.ts
+cypress/videos
+cypress/screenshots
+
+# e2e
+/e2e/*.js
+/e2e/*.map
 
 # System Files
 .DS_Store
